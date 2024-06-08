@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Rank do Herói</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de Rank do Herói</h1>
+        <p>Insira o número de vitórias e derrotas para descobrir o rank do seu herói.</p>
+    </header>
+
+    <main class="container">
+        <div class="rank-list">
+            <h2>Lista de Ranks</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Pontuação Necessária</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sem Rank</td>
+                        <td>0 - 24</td>
+                    </tr>
+                    <tr>
+                        <td>Bronze</td>
+                        <td>25 - 99</td>
+                    </tr>
+                    <tr>
+                        <td>Prata</td>
+                        <td>100 - 499</td>
+                    </tr>
+                    <tr>
+                        <td>Ouro</td>
+                        <td>500 - 1499</td>
+                    </tr>
+                    <tr>
+                        <td>Safira</td>
+                        <td>1500 - 2999</td>
+                    </tr>
+                    <tr>
+                        <td>Diamante</td>
+                        <td>3000+</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="input-group">
+            <label for="victories">Número de Vitórias:</label>
+            <input type="number" id="victories" min="0" value="244" required>
+            <span class="error-message" id="victories-error"></span>
+        </div>
+        <div class="input-group">
+            <label for="defeats">Número de Derrotas:</label>
+            <input type="number" id="defeats" min="0" value="4" required>
+            <span class="error-message" id="defeats-error"></span>
+        </div>
+        <button onclick="calculateRank()">Verificar Rank</button>
+        <p id="result"></p>
+
+        <div id="rank-images">
+            <img id="bronze" src="imagens/bronze.png" alt="Bronze" style="display: none;">
+            <img id="prata" src="imagens/prata.png" alt="Prata" style="display: none;">
+            <img id="ouro" src="imagens/ouro.png" alt="Ouro" style="display: none;">
+            <img id="safira" src="imagens/safira.png" alt="Safira" style="display: none;">
+            <img id="diamante" src="imagens/diamante.png" alt="Diamante" style="display: none;">
+        </div>
+    </main>
+
+
+    <script src="js/js.js"></script>
+</body>
+</html>
+
+
